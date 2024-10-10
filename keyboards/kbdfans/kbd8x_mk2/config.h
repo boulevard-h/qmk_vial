@@ -23,6 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 12
 #define MATRIX_COLS 9
 
+#define USB_POLLING_INTERVAL_MS 1 // useless
+#define MATRIX_IO_DELAY 30 // useless
+
 /*
  * Keyboard Matrix Assignments
  *
@@ -77,7 +80,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 2 // 2 is a good tradeoff, 1 will cause double presses on space key
+// #define TAPPING_TERM 0 // useless...
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
